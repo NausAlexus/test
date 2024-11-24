@@ -1,8 +1,8 @@
 // src/components/WidgetQuiz.jsx
 import React, { useState } from "react";
 import QuizContent from "./QuizContent";
-import "../../style/Quiz.css";
-import quizConfig from "../../config/main-config.json"
+import "../style/Quiz.css";
+import quizConfig from "../config/main-config.json"
 
 function WidgetQuiz() {
     const questions = quizConfig.quizQuestions[0].questions;

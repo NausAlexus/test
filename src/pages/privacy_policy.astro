@@ -1,0 +1,148 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import PrivacyPolicyConfig from "../config/main-config.json";
+const privacyData = PrivacyPolicyConfig.privacyPolicy[0].privaciText[0];
+---
+
+<Layout>
+  <div class="privacy-policy-container">
+    <h2>{PrivacyPolicyConfig.privacyPolicy[0].subtitle}</h2>
+    <div class="privacy-policy-text-container">
+      <p class="privacy-policy-title">
+        {PrivacyPolicyConfig.privacyPolicy[0].lastRevision}
+      </p>
+      <p class="privacy-policy-description">
+        {PrivacyPolicyConfig.privacyPolicy[0].description}
+      </p>
+      <ol>
+        {
+          privacyData &&
+            privacyData.sections &&
+            privacyData.sections.map((section) => (
+              <li>
+                {section.title}
+                <ul>
+                  {section.items &&
+                    section.items.map((item) => {
+                      if (typeof item === "string") {
+                        return <li>{item}</li>;
+                      } else if (item.title && item.items) {
+                        return (
+                          <li>
+                            {item.title}
+                            <ul>
+                              {item.items.map((subItem) => {
+                                if (typeof subItem === "string") {
+                                  return <li>{subItem}</li>;
+                                } else if (subItem.text && subItem.subItems) {
+                                  return (
+                                    <li>
+                                      {subItem.text}
+                                      {subItem.subItems &&
+                                        subItem.subItems.length > 0 && (
+                                          <ul>
+                                            {subItem.subItems.map(
+                                              (subSubItem) => (
+                                                <li>{subSubItem}</li>
+                                              )
+                                            )}
+                                          </ul>
+                                        )}
+                                    </li>
+                                  );
+                                }
+                                return null;
+                              })}
+                            </ul>
+                          </li>
+                        );
+                      } else if (item.text) {
+                        return (
+                          <li>
+                            {item.text}
+                            {item.subItems && item.subItems.length > 0 && (
+                              <ul>
+                                {item.subItems.map((subItem) => (
+                                  <li>{subItem}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </li>
+                        );
+                      }
+                      return null;
+                    })}
+                </ul>
+              </li>
+            ))
+        }
+      </ol>
+      <p></p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .privacy-policy-container {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 1194px;
+  }
+  h2 {
+    font-family: "Sitara-Bold", sans-serif;
+    font-size: 120px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 108px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .privacy-policy-text-container {
+    margin-top: 40px;
+    font-family: "Sitara-Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .privacy-policy-text-container ul {
+    list-style-type: disc;
+    margin-left: 40px;
+  }
+  .privacy-policy-description {
+    margin-top: 30px;
+  }
+  .privacy-policy-text-container ol {
+    margin-top: 30px;
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  .privacy-policy-text-container ul,
+.privacy-policy-text-container ol ol {
+  margin-left: 25px;
+}
+
+  @media (max-width: 1200px) {
+    .privacy-policy-container {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+
+
+    }
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 40px;
+      line-height: 36px;
+    }
+    .privacy-policy-text-container {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+</style>

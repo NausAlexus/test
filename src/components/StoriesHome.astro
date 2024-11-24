@@ -1,0 +1,76 @@
+---
+import StoriesLeftWidget from "./StoriesLeftWidget.astro"
+import StoriesRightWidget from "./StoriesRightWidget.astro"
+import StoriesHomeConfig from "../config/main-config.json"
+---
+
+<div class="stories-home-container">
+    <h2>{StoriesHomeConfig.storiesHome[0].subtitle}</h2>
+    <div class="stories-vidget-container">
+        <StoriesLeftWidget/>
+        <StoriesRightWidget/>
+    </div>
+</div>
+
+<style>
+    .stories-home-container {
+        margin-top: 130px;
+        width: 1194px;
+    }
+    h2 {
+        font-style: italic;
+        color: var(--color-text);
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 108px;
+        text-align: left;
+    }
+    .stories-vidget-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* Адаптируем под разрешение от 1024 до 1400px */
+    @media (max-width: 1400px) {
+        .stories-home-container {
+            width: 1000px;
+            margin-top: 100px;
+        }
+        h2 {
+            font-size: 100px;
+        }
+    }
+    /* Адаптируем под разрешение от 768 до 1024px */
+    @media (max-width: 1024px) {
+        .stories-home-container {
+            width: 760px;
+            margin-top: 40px;
+        }
+        h2 {
+            font-size: 72px;
+        }
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+        .stories-vidget-container {
+            flex-direction: column;
+        }
+        .stories-home-container {
+            width: 100%;
+        }
+        h2 {
+            font-size: 40px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 36px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+    /* Адаптируем под разрешение до 425px */
+    @media (max-width: 425px) {
+        .stories-home-container {
+            width: 328px;
+        }
+    }
+</style>

@@ -1,0 +1,89 @@
+---
+import planHomeConfig from "../config/main-config.json"
+const planHomeWidget1Data = planHomeConfig.planHome[0];
+---
+
+<div>
+    {planHomeWidget1Data.planHomeWidget1.map((widget) => (
+        <h3>{widget.subtitle}</h3>
+        <p>{widget.description}</p>
+    ))}
+</div>
+
+<style>
+    div {
+        margin-top: 52px;
+        width: 517px;
+
+        padding: 40px;
+        border-radius: 30px;
+
+        background: #00000066;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        will-change: backdrop-filter;
+        box-shadow: 
+            0px 0px 10px 0px #00000033,
+            0px 0px 10px 0px #FFFFFF40 inset,
+            0px 4px 4px 0px #FFFFFF4D inset,
+            0px 2px 6px 0px #0000004D;
+    }
+    h3 {
+        margin: 0;
+        font-family: "Sitara-Bold", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+    }
+    p {
+        margin: 0;
+        margin-top: 10px;
+        font-family: "Sitara-Regular", sans-serif;
+        color: var(--color-widget-text);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: left;
+    }
+    p:not(:last-of-type) {
+        margin-bottom: 40px;
+    }
+    /* Адаптируем под разрешение от 768 до 1024px */
+    @media (max-width: 1024px) {
+        div {
+            margin-top: 24px;
+            width: 380px;
+        }
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+        div {
+            width: 100%;
+        }
+    }
+    /* Адаптируем под разрешение до 425px */
+    @media (max-width: 425px) {
+        div {
+            width: 328px;
+        }
+        h3 {
+            font-family: "Sitara-Bold", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        p {
+            font-family: "Sitara-Regular", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+</style>

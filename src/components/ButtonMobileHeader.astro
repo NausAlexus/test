@@ -1,0 +1,87 @@
+---
+
+---
+
+<div class="burger" id="toggle-nav">
+  <span class="line-burger"></span>
+</div>
+
+<style>
+  .burger {
+    width: 26px;
+    height: 26px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: var(--bg-button);
+    width: 35px;
+    height: 35px;
+    border-radius: 81px;
+  }
+  .line-burger {
+    width: 15px;
+    height: 1.66px;
+    background-color: #000000;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  .burger::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1.66px;
+    background-color: #000000;
+    margin-top: -13px;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  .burger::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1.66px;
+    background-color: #000000;
+    margin-bottom: -13px;
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  .burger.visable span {
+    transform: scale(0);
+  }
+  .burger.visable::before {
+    transform: rotateZ(45deg);
+    margin-top: 0px;
+  }
+  .burger.visable::after {
+    transform: rotateZ(-45deg);
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: 1025px) {
+    .burger {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggle-nav");
+    const navMenu = document.querySelector("nav ul");
+    const headerMobile = document.querySelector("header");
+    const burger = document.querySelector(".burger");
+
+    toggleButton.addEventListener("click", () => {
+      const isVisible = navMenu.classList.toggle("visible");
+      if (isVisible) {
+        headerMobile.classList.add("visable");
+        burger.classList.add("visable");
+      } else {
+        headerMobile.classList.remove("visable");
+        burger.classList.remove("visable");
+      }
+    });
+  });
+</script>

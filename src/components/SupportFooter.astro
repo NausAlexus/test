@@ -1,0 +1,61 @@
+---
+// import FBlogo from "../../img/home_img/logo-fb.svg";
+import footerConfig from "../config/footer-config.json";
+const supportFooterData = footerConfig.supportFooter;
+const emailData = supportFooterData[0].email[0];
+const facebookData = supportFooterData[1].facebook[0];
+---
+
+<div class="suport-footer-container">
+  <a class="contact-link" href={emailData.href} target="_blank"
+    >{emailData.name}</a
+  >
+  <a class="footer-fb-link" target="_blank" href={facebookData.href}
+    ><img src="/test/img/home_img/logo-fb.svg" alt={facebookData.altImg} /></a
+  >
+</div>
+
+<style>
+  .suport-footer-container {
+    display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  .contact-link {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 16px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    transition: opacity 0.3s ease;
+  }
+  @media(min-width: 1024px){
+    .contact-link:hover {
+      opacity: 0.7;
+    }
+  }
+  img {
+    margin-top: 20px;
+    transition: opacity 0.3s ease;
+  }
+  @media(min-width: 1024px){
+    img:hover {
+      opacity: 0.7;
+    }
+  }
+  @media (max-width: 768px) {
+    .contact-link {
+        margin-left: 12px;
+
+      font-family: "Sitara-Bold", sans-serif;
+      line-height: 19.2px;
+      align-items: flex-start;
+      
+    }
+  }
+</style>

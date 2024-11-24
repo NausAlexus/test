@@ -1,0 +1,48 @@
+---
+import priceHomeConfig from "../config/main-config.json"
+const priceHomeData = priceHomeConfig.priceHome[0];
+---
+
+<a href={priceHomeData.priceDemoWidget[0].link}>{priceHomeData.priceDemoWidget[0].buttonText}</a>
+
+<style>
+    a {
+        padding: 10px 71px;
+        display: block;
+        text-decoration: none;
+        color: var(--color-black);
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        background: var(--bg-button);
+        border: none;
+        width: 268px;
+        height: 46px;
+        font-size: 22px;
+        line-height: 26.4px;
+        font-weight: 700;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+    @media(min-width: 1024px){
+        a:hover {
+            opacity: 0.7;
+        }
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+        a {
+            text-align: center;
+            padding: 10px 10px;
+            width: 200px;
+        }
+    }
+    /* Адаптируем под разрешение до 425px */
+    @media (max-width: 425px) {
+        a {
+            margin-top: 20px;
+            width: 248px;
+        }
+    }
+</style>

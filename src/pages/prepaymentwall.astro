@@ -1,0 +1,28 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro"
+import StoriesHome from "../components/StoriesHome.astro"
+import PriceHome from "../components/PriceHome.astro"
+---
+
+<Layout>
+    <div class="prepaymentwall-container">
+        <HeroHome/>
+        <StoriesHome/>
+        <PriceHome/>
+    </div>
+</Layout>
+
+<style>
+    .prepaymentwall-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+            .prepaymentwall-container {
+            padding: 0 16px;
+        }
+    }
+</style>

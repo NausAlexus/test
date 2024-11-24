@@ -1,0 +1,25 @@
+---
+import Layout from "../Layouts/Layout.astro"
+import WidgetQuiz from "../components/WidgetQuiz.jsx"
+---
+
+<Layout>
+    <div class="quiz-container">
+        <WidgetQuiz client:load/>
+    </div>
+</Layout>
+
+<style>
+    .quiz-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+            .quiz-container {
+            padding: 0 16px;
+            margin-bottom: 0;
+        }
+    }
+</style>

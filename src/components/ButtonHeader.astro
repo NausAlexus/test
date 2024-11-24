@@ -1,0 +1,36 @@
+---
+import navConfig from "../config/nav-config.json"
+---
+
+{navConfig.buttons.map(button => (
+    <button class="button-header" type="button">
+        {button.name}
+    </button>
+))}
+
+<style>
+    .button-header {
+        background: var(--bg-button);
+        border: none;
+        width: 145px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: 700;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+    @media(min-width: 1024px){
+        .button-header:hover {
+            opacity: 0.7;
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .button-header{
+            height: 35px;
+        }
+    
+    }
+</style>

@@ -1,0 +1,96 @@
+---
+import StoriesHomeConfig from "../config/main-config.json"
+const StoriesLeftWidgetData = StoriesHomeConfig.storiesHome[0];
+---
+
+<div class="stories-left-container">
+    {StoriesLeftWidgetData.storiesLeftWidget.map(item => (
+        <div class="stories-left-item">
+            <h3>{item.subtitle}</h3>
+            <p>{item.description}</p>
+        </div>
+    ))}
+</div>
+
+<style>
+    .stories-left-container {
+        margin-top: 40px;
+        width: 577px;
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 100%;
+        gap: 34px 0px;
+    }
+    .stories-left-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        border-radius: 30px;
+
+        background: #00000066;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        will-change: backdrop-filter;
+        box-shadow: 
+            0px 0px 10px 0px #00000033,
+            0px 0px 10px 0px #FFFFFF40 inset,
+            0px 4px 4px 0px #FFFFFF4D inset,
+            0px 2px 6px 0px #0000004D;
+    }
+    h3 {
+        font-family: Arial;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    p {
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23.4px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-top: 10px;
+        color: var(--color-widget-text);
+    }
+    /* Адаптируем под разрешение от 768 до 1024px */
+    @media (max-width: 1024px) {
+        .stories-left-container {
+            width: 360px;
+        }
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+        .stories-left-container {
+            width: 100%;
+            margin-top: 20px;
+            gap: 20px;
+        }
+    }
+    /* Адаптируем под разрешение до 425px */
+    @media (max-width: 425px) {
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        p {
+            font-family: "Sitara-Regular", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+</style>

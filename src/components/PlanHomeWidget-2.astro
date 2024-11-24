@@ -1,0 +1,92 @@
+---
+import planHomeConfig from "../config/main-config.json";
+const planHomeData = planHomeConfig.planHome[0]; // Извлекаем данные из конфигурации
+---
+
+<div class="plan-home-widget-2-container">
+    {planHomeData.planHomeWidget2.map((widget) => (
+        <div class="plan-home-widget-item">
+            <h3>{widget.subtitle}</h3>
+            <p>{widget.description}</p>
+        </div>
+    ))}
+</div>
+
+<style>
+    .plan-home-widget-2-container {
+        margin-top: 40px;
+        width: 1194px;
+
+        display: grid;
+        grid-template-rows: repeat(2, 280px);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    .plan-home-widget-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        border-radius: 30px;
+
+        background: #00000066;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        will-change: backdrop-filter;
+        box-shadow: 
+            0px 0px 10px 0px #00000033,
+            0px 0px 10px 0px #FFFFFF40 inset,
+            0px 4px 4px 0px #FFFFFF4D inset,
+            0px 2px 6px 0px #0000004D;
+    }
+    h3 {
+        margin: 0;
+        font-family: "Sitara-Bold", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+    }
+    p {
+        margin: 0;
+        margin-top: 10px;
+        font-family: "Sitara-Regular", sans-serif;
+        color: var(--color-widget-text);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: left;
+    }
+    /* Адаптируем под разрешение от 1024 до 1400px */
+    @media (max-width: 1400px) {
+        .plan-home-widget-2-container {
+            width: 1000px;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+    /* Адаптируем под разрешение от 768 до 1024px */
+    @media (max-width: 1024px) {
+        .plan-home-widget-2-container {
+            width: 760px;
+        }
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+        .plan-home-widget-2-container {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    /* Адаптируем под разрешение до 425px */
+    @media (max-width: 425px) {
+        .plan-home-widget-2-container {
+            width: 328px;
+        }
+    }
+</style>

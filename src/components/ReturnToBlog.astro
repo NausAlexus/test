@@ -1,0 +1,52 @@
+---
+import MindfulMorningsConfig from "../config/main-config.json"
+---
+
+<a class="return-button" href={MindfulMorningsConfig.mindfulMornings[0].path}>{MindfulMorningsConfig.mindfulMornings[0].textButton}</a>
+
+<style>
+  .return-button {
+    color: var(--color-black);
+    text-decoration: none;
+    display: block;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    background: var(--bg-button);
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    width: 230px;
+    height: 48px;
+    border-radius: 30px;
+
+    padding: 12px 60px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  @media(min-width: 1024px){
+    .return-button:hover {
+      opacity: 0.7;
+    }
+  }
+  @media (max-width: 1024px) {
+    .return-button {
+      font-family: "Sitara-Bold" sans-serif;
+      width: 248px;
+      height: 46px;
+      padding: 10px;
+
+
+      font-size: 22px;
+      line-height: 26.4px;
+
+      border-radius: 75px;
+      
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import HeroHome from "../components/HeroHome.astro"
+import Layout from "../Layouts/Layout.astro"
+import PlanHome from "../components/PlanHome.astro"
+import PriceHome from "../components/PriceHome.astro"
+import FAQCard from "../components/FAQCard.astro"
+import StoriesHome from "../components/StoriesHome.astro"
+---
+
+<Layout>
+    <div class="home-container">
+        <HeroHome />
+        <PlanHome/>
+        <PriceHome/>
+        <FAQCard/>
+        <StoriesHome/>
+    </div>
+</Layout>
+
+<style>
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 44px;
+    }
+    
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+            .home-container {
+            padding: 0 16px;
+            margin-bottom: 0;
+        }
+    }
+</style>

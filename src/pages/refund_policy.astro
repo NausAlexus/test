@@ -1,0 +1,73 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import RefundPolicyConfig from "../config/main-config.json"
+const RefundPolicyData = RefundPolicyConfig.refundPolicy[0];
+---
+
+<Layout>
+	<div class="refund_policy">
+		<h2 class="refund_policy_title">{RefundPolicyData.subtitle}</h2>
+		<div class="refund_policy_text">
+			<p>{RefundPolicyData.lastRevision}</p>
+			<p>{RefundPolicyData.ourProduct}</p>
+			<ol>
+				{RefundPolicyData.numbers.map(item => (
+					<li>{item.item}</li>
+				))}
+			</ol>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.refund_policy {
+		margin: 0 auto;
+		margin-top: 100px;
+		margin-bottom: 66px;
+		width: 1194px;
+	}
+	.refund_policy_title {
+		margin-bottom: 40px;
+		font-family: "Sitara-Bold", sans-serif;
+		font-size: 120px;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 108px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+	}
+	.refund_policy_text ol {
+    	margin-left: 20px;
+  	}
+	p {
+		margin-bottom: 20px;
+		font-family: "Sitara-Regular", sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21.6px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+	}
+
+	@media (max-width: 1200px) {
+    .refund_policy {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+
+
+    }
+  }
+  @media (max-width: 768px) {
+    .refund_policy_title {
+      font-size: 40px;
+      line-height: 36px;
+    }
+    p  {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+</style>

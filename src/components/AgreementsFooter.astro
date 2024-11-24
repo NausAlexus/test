@@ -1,0 +1,75 @@
+---
+import footerConfig from "../config/footer-config.json"
+const agreementsFooterData = footerConfig.agreementsFooter[0];
+---
+
+<div class="agreements-footer-container">
+    <p>{agreementsFooterData.subtitle}</p>
+    <ul>
+        {agreementsFooterData.links.map(item => (
+            <li><a href={item.path}>{item.name}</a></li>
+        ))}
+    </ul>
+</div>
+
+<style>
+    p {
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+    }
+    ul {
+        margin-top: 23px;
+
+    }
+    li{
+        list-style: none;
+    }
+    li:not(:first-child) {
+        margin-top: 10px;
+    }
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--color-text);
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.8px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        transition: opacity 0.3s ease;
+    }
+    @media(min-width: 1024px){
+      a:hover {
+        opacity: 0.7;
+      }
+    }
+    @media (max-width: 768px) {
+    p {
+      font-family: "Sitara-Bold", sans-serif;
+      line-height: 19.2px;
+    }
+  }
+  @media (max-width: 768px) {
+    p {
+      font-family: "Sitara-Bold", sans-serif;
+      line-height: 19.2px;
+    }
+    ul {
+      margin-top: 20px;
+    }
+    li {
+      height: 22px;
+    }
+    a {
+      font-family: "Sitara-Bold", sans-serif;
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+</style>

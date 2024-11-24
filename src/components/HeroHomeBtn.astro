@@ -1,0 +1,73 @@
+---
+import homeConfig from "../config/main-config.json";
+const heroData = homeConfig.heroHome[0];
+---
+
+<a href={heroData.link} class="m-l-80">{heroData.buttonText}</a>
+
+<style>
+    a {
+        color: var(--color-black);
+        text-decoration: none;
+        display: block;
+        background: var(--bg-button);
+        margin: 0;
+        margin-top: 88px;
+        width: 344px;
+        height: 46px;
+        top: 594px;
+        padding: 10px 60px;
+        border-radius: 75px;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26.4px;
+        text-align: center;
+    }
+    @media(min-width: 1024px){
+        a:hover {
+            opacity: 0.7;
+        }
+    }
+    .m-l-80 {
+        margin-left: 80px;
+    }
+    /* Адаптируем под разрешение от 1024 до 1400px */
+    @media (max-width: 1400px) {
+        a {
+            display: block;
+            padding: 10px;
+        }
+        .m-l-80 {
+            margin-left: 20px;
+        }
+    }
+    /* Адаптируем под разрешение от 768 до 1024px */
+    @media (max-width: 1024px) {
+        a {
+            width: 260px;
+            font-size: 18px;
+            margin-top: 60px;
+        }
+    }
+    /* Адаптируем под разрешение от 425 до 768px */
+    @media (max-width: 768px) {
+        a {
+            margin-top: 20px;
+            width: 70%;
+            text-align: center;
+        }
+        .m-l-80 {
+            margin-left: unset;
+        }
+    }
+    /* Адаптируем под разрешение до 425px */
+    @media (max-width: 425px) {
+        a {
+            width: 268px;
+        }
+    }
+</style>

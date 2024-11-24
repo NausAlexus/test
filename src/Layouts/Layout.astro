@@ -1,0 +1,66 @@
+---
+import '../../src/style/variables.css'
+import '../style/fonts.css'
+import Header from "../components/Header.astro"
+import Footer from '../components/Footer.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/test/ico.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Fitnhub</title>
+	</head>
+	<body>
+		<div class="layout-container">
+		  <Header />
+		  <div class="main-content">
+			<slot />
+		  </div>
+		  <Footer />
+		</div>
+	  </body>
+</html>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box; 
+	}
+	body {
+		background-image: url('/test/img/background.webp');
+		background-size: 100vw;
+		font-family: "Sitara-Bold", sans-serif;
+		color: var(--color-text);
+	}
+	.main-content {
+    	flex: 1;
+	}
+	.layout-container {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #292929;
+	}
+	body::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #292929;
+	}
+	body::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+		border-radius: 10px;
+		background-color: #3e3e3e;
+	}
+
+	@media (max-width: 1024px) {
+		body {
+			background-image: url('/test/img/background-mobile.webp');
+		}
+  	}
+</style>

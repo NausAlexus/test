@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Sitara-Bold;
+    src: url('/test/fonts/Sitara-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: Sitara-BoldItalic;
+    src: url('/test/fonts/Sitara-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: Sitara-Italic;
+    src: url('/test/fonts/Sitara-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: Sitara-Regular;
+    src: url('/test/fonts/Sitara-Regular.ttf') format('truetype');
+}

@@ -1,0 +1,79 @@
+---
+import Layout from "../Layouts/Layout.astro";
+import termOfUseConfig from "../config/main-config.json"
+const termOfUseData = termOfUseConfig.termsOfUse[0];
+---
+
+<Layout>
+  <div class="terms_of_use">
+    <h2 class="terms_of_use_title">{termOfUseConfig.termsOfUse[0].subtitle}</h2>
+    <div class="terms_of_use_text">
+      <p>{termOfUseConfig.termsOfUse[0].lastRevision}</p>
+      <p>{termOfUseConfig.termsOfUse[0].ourProduct}</p>
+      <ol>
+        {termOfUseData.numbers.map(item => (
+          <li>{item.item.split('\n').map(line => (
+            <span>
+                {line}
+                <br />
+            </span>
+        ))}</li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</Layout>
+
+<style>
+	.terms_of_use {
+		margin: 0 auto;
+		margin-top: 100px;
+		margin-bottom: 66px;
+		width: 1194px;
+	}
+	.terms_of_use_title {
+		margin-bottom: 40px;
+		font-family: "Sitara-Bold", sans-serif;
+		font-size: 120px;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 108px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+	}
+	.terms_of_use_text ol {
+    	margin-left: 20px;
+  	}
+	p {
+		margin-bottom: 20px;
+		font-family: "Sitara-Regular", sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21.6px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+	}
+
+
+	@media (max-width: 1200px) {
+		.terms_of_use {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+
+
+    }
+  }
+  @media (max-width: 768px) {
+    .terms_of_use_title {
+      font-size: 40px;
+      line-height: 36px;
+    }
+    p  {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+</style>

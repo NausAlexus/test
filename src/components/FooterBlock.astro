@@ -1,0 +1,42 @@
+---
+import PagesFooter from "./PagesFooter.astro"
+import BlogFooter from "./BlogFooter.astro"
+import AgreementsFooter from "./AgreementsFooter.astro"
+import SupportFooter from "./SupportFooter.astro"
+---
+
+<div class="footer-block">
+    <PagesFooter/>
+    <BlogFooter/>
+    <AgreementsFooter/>
+    <SupportFooter/>
+    
+</div>
+
+<style>
+    .footer-block {
+        margin-top: 48px;
+        display: flex;
+        margin-right: auto;
+        gap: 100px;
+    }
+
+    @media (max-width:768px) {
+        .footer-block{
+            gap: 40px;
+            max-width: 360px;
+            
+        }
+        
+    }
+    @media (max-width:768px) {
+        .footer-block{
+            margin-right: 0;
+            
+
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+    }
+</style>

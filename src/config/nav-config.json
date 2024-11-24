@@ -1,0 +1,35 @@
+{
+  "links": [
+    {
+      "name": "About us",
+      "path": "/test/about_us"
+    },
+    {
+      "name": "Blog",
+      "path": "/test/blog"
+    },
+    {
+      "name": "Pricing",
+      "path": "/test/pricing"
+    },
+    {
+      "name": "Refund policy",
+      "path": "/test/refund_policy"
+    },
+    {
+      "name": "Terms of use",
+      "path": "/test/terms_of_use"
+    },
+    {
+      "name": "Privacy policy",
+      "path": "/test/privacy_policy"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Login",
+      "type": "button",
+      "action": "login"
+    }
+  ]
+}

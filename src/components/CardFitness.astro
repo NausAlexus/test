@@ -1,0 +1,76 @@
+---
+import ReadMoreBtn from "./ReadMoreBtn.astro";
+// import BlogFitnesImg from "./../../../img/blog_img/Fitnes.jpg";
+import CardFitnessConfig from "../config/main-config.json"
+---
+
+<div class="card-mornings">
+  <img class="BlogMorningImg" src="/test/img/blog_img/Fitnes.jpg" alt="Mindful Mornings" />
+  <p class="card-mornings_title">{CardFitnessConfig.cardFitness[0].subtitle}</p>
+  <p class="card-mornings_text">{CardFitnessConfig.cardFitness[0].description}</p>
+  <a href={CardFitnessConfig.cardFitness[0].path}>  <ReadMoreBtn /></a>
+</div>
+
+<style>
+  .card-mornings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 371.33px;
+    height: 100%;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: "Sitara-Bold", sans-serif;
+
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    will-change: backdrop-filter;
+    box-shadow:
+      0px 0px 10px 0px #00000033,
+      0px 0px 10px 0px #ffffff40 inset,
+      0px 4px 4px 0px #ffffff4d inset,
+      0px 2px 6px 0px #0000004d;
+  }
+  .BlogMorningImg {
+    width: 291.33px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  .card-mornings_title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .card-mornings_text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+  @media (max-width: 1250px) {
+    .card-mornings {
+      width: 328px;
+    }
+
+    .BlogMorningImg {
+      width: 248px;
+      height: 240px;
+    }
+    .card-mornings_title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    .card-mornings_text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+    }
+  }
+
+  
+</style>

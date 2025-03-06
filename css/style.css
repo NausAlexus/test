@@ -448,6 +448,93 @@ body::-webkit-scrollbar-track {
     text-align: center;
 }
 
+
+.footer {
+    background-color: #4ab637; /* Цвет фона футера */
+    color: #ecf0f1; /* Цвет текста */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+}
+
+.footer-container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование */
+    padding: 0 20px; /* Боковые отступы */
+    display: flex; /* Используем Flexbox для адаптивности */
+    flex-direction: column; /* В столбец по умолчанию */
+    align-items: center; /* Центрируем элементы по горизонтали */
+}
+
+.footer-info {
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.footer-link {
+    font-size: 24px; /* Размер шрифта для ссылки на название */
+    font-weight: bold; /* Жирный шрифт */
+    color: #ecf0f1; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer-link:hover {
+    color: rgb(127, 127, 127); /* Цвет при наведении */
+}
+
+.contact-footer {
+    display: block; /* Каждая ссылка на новой строке */
+    color: #ecf0f1; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 5px 0; /* Отступы сверху и снизу */
+}
+
+.contact-footer:hover {
+    color: rgb(127, 127, 127); /* Цвет при наведении */
+}
+
+.footer-bottom {
+    display: flex; /* Используем Flexbox для нижней части */
+    flex-direction: column; /* В столбец по умолчанию */
+    align-items: center; /* Центрируем элементы */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.footer-bottom a {
+    color: #ecf0f1; /* Цвет ссылок внизу */
+    margin: 0 10px; /* Отступы между ссылками */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer-bottom a:hover {
+    color: rgb(127, 127, 127); /* Цвет при наведении */
+}
+
+.footer-bottom p {
+    margin-top: 10px; /* Отступ сверху для текста © */
+    font-size: 14px; /* Размер шрифта для текста © */
+    text-align: center; /* Выравнивание по центру */
+}
+footer p {
+    text-align: center;
+}
+
+/* Адаптивные стили */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* В ряд на больших экранах */
+        justify-content: space-between; /* Распределяем пространство между элементами */
+    }
+
+    .footer-info {
+        text-align: left; /* Выравниваем текст влево для больших экранов */
+    }
+
+    .footer-bottom {
+        flex-direction: row; /* В ряд для нижней части */
+        justify-content: center; /* Центрируем элементы */
+    }
+}
+
 @media (max-width: 768px) {
     .advantages-description {
         font-size: 1em;

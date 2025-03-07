@@ -456,7 +456,7 @@ body::-webkit-scrollbar-track {
     background-color: #44f325; /* Цвет фона футера */
     color: #000000; /* Цвет текста */
     padding: 20px 0; /* Отступы сверху и снизу */
-    font-family: "Arial", sans-serif; /* Шрифт */
+    margin-top: auto;
 }
 
 .footer-container {

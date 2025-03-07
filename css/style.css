@@ -1167,7 +1167,7 @@ justify-content: space-evenly;
 }
 
 .arena-title {
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: center;
 }
 
@@ -1325,7 +1325,7 @@ justify-content: space-evenly;
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .support-intro {
@@ -1378,6 +1378,118 @@ justify-content: space-evenly;
 }
 
 
+
+/* Основные стили для раздела истории кампании */
+.campaign-history-unique {
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+.campaign-title-unique {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-top: 80px;
+}
+
+.campaign-intro-unique {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+/* Стили для секций */
+.campaign-section-unique {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #1c1c1c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.campaign-section-unique:hover {
+    transform: translateY(-5px);
+}
+
+.campaign-subtitle-unique {
+    width: 100%;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.text-content-unique {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.text-content-unique strong {
+    color: green;
+}
+
+.imgCenter-unique {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.campaign-image-unique {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Чередование блоков изображения и текста */
+.img-left-unique {
+    order: -1;
+}
+
+.img-right-unique {
+    order: 1;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .campaign-section-unique {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-left-unique, .img-right-unique {
+        order: 0;
+    }
+    .campaign-title-unique{
+        font-size: 1.5em;
+    }
+    .campaign-subtitle-unique{
+        font-size: 1.4em;
+    }
+    .text-content-unique{
+        padding: 5px;
+    }
+}
+
+@media (max-width:900px) {
+    .campaign-section-unique
+    {
+        flex-direction: column;
+    }
+    
+}
 
 
 

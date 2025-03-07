@@ -598,3 +598,15 @@ footer p {
         display: flex;
     }
 }
+.footer__links{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20px;
+
+}
+.footer__links img{
+    height: 40px;
+}

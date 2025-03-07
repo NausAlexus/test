@@ -9,5 +9,14 @@ function closePopup() {
 }
 
 window.onload = function() {
-    setTimeout(showPopup, 3000); // Показать поп-ап через 3 секунды
+    // Проверка, был ли уже показан поп-ап
+    if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(() => {
+            showPopup(); // Показать поп-ап через 3 секунды
+            sessionStorage.setItem('popupShown', 'true'); // Установить флажок, что поп-ап показан
+        }, 3000);
+    }
 };
+
+// Пример: добавление события для кнопки закрытия поп-апа
+document.getElementById('closePopupButton').addEventListener('click', closePopup);

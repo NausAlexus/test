@@ -452,8 +452,8 @@ body::-webkit-scrollbar-track {
 }
 
 .footer {
-    background-color: #4ab637; /* Цвет фона футера */
-    color: #ecf0f1; /* Цвет текста */
+    background-color: #44f325; /* Цвет фона футера */
+    color: #000000; /* Цвет текста */
     padding: 20px 0; /* Отступы сверху и снизу */
     font-family: "Arial", sans-serif; /* Шрифт */
 }
@@ -475,7 +475,7 @@ body::-webkit-scrollbar-track {
 .footer-link {
     font-size: 24px; /* Размер шрифта для ссылки на название */
     font-weight: bold; /* Жирный шрифт */
-    color: #ecf0f1; /* Цвет текста ссылок */
+    color: #000000; /* Цвет текста ссылок */
     text-decoration: none; /* Убираем подчеркивание */
 }
 
@@ -485,7 +485,7 @@ body::-webkit-scrollbar-track {
 
 .contact-footer {
     display: block; /* Каждая ссылка на новой строке */
-    color: #ecf0f1; /* Цвет текста */
+    color: #000000; /* Цвет текста */
     text-decoration: none; /* Убираем подчеркивание */
     margin: 5px 0; /* Отступы сверху и снизу */
 }
@@ -502,7 +502,7 @@ body::-webkit-scrollbar-track {
 }
 
 .footer-bottom a {
-    color: #ecf0f1; /* Цвет ссылок внизу */
+    color: #000000; /* Цвет ссылок внизу */
     margin: 0 10px; /* Отступы между ссылками */
     text-decoration: none; /* Убираем подчеркивание */
 }
@@ -594,6 +594,7 @@ footer p {
 .skillfantasyarena-icon {
     font-size: 1.5em;
     margin-right: 10px;
+    color: #44f325;
 }
 .skillfantasyarena-production-btn {
     text-decoration: none;
@@ -782,18 +783,6 @@ footer p {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .reviews-section {
     text-align: center;
     margin: 20px;
@@ -857,34 +846,6 @@ footer p {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 1025px) {
-    .header-link:hover,
-    .footer-link:hover {
-        color: rgb(127, 127, 127);
-    }
-    .nav-link:hover {
-        color: rgb(127, 127, 127);
-    }
-    .play-button:hover {
-        background-color: #44f325;
-    }
-}
-
 .navigation {
     display: flex;
     align-items: center;
@@ -937,11 +898,30 @@ footer p {
 }
 .footer__links img{
     height: 40px;
+}
 
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) {
+    .header-link:hover,
+    .footer-link:hover {
+        color: rgb(127, 127, 127);
+    }
+    .nav-link:hover {
+        color: rgb(127, 127, 127);
+    }
+    .play-button:hover {
+        background-color: #44f325;
+    }
     .skillfantasyarena-production-btn:hover {
         background-color: #44f325;
         color: rgb(0, 0, 0);
-        border: none;
+        border: black;
     }
-
 }

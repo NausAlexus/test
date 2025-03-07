@@ -453,8 +453,8 @@ body::-webkit-scrollbar-track {
 }
 
 .footer {
-    background-color: #4ab637; /* Цвет фона футера */
-    color: #ecf0f1; /* Цвет текста */
+    background-color: #44f325; /* Цвет фона футера */
+    color: #000000; /* Цвет текста */
     padding: 20px 0; /* Отступы сверху и снизу */
     font-family: "Arial", sans-serif; /* Шрифт */
 }
@@ -476,7 +476,7 @@ body::-webkit-scrollbar-track {
 .footer-link {
     font-size: 24px; /* Размер шрифта для ссылки на название */
     font-weight: bold; /* Жирный шрифт */
-    color: #ecf0f1; /* Цвет текста ссылок */
+    color: #000000; /* Цвет текста ссылок */
     text-decoration: none; /* Убираем подчеркивание */
 }
 
@@ -486,7 +486,7 @@ body::-webkit-scrollbar-track {
 
 .contact-footer {
     display: block; /* Каждая ссылка на новой строке */
-    color: #ecf0f1; /* Цвет текста */
+    color: #000000; /* Цвет текста */
     text-decoration: none; /* Убираем подчеркивание */
     margin: 5px 0; /* Отступы сверху и снизу */
 }
@@ -503,7 +503,7 @@ body::-webkit-scrollbar-track {
 }
 
 .footer-bottom a {
-    color: #ecf0f1; /* Цвет ссылок внизу */
+    color: #000000; /* Цвет ссылок внизу */
     margin: 0 10px; /* Отступы между ссылками */
     text-decoration: none; /* Убираем подчеркивание */
 }
@@ -545,16 +545,305 @@ footer p {
     }
 }
 
-@media (min-width: 1025px) {
-    .header-link:hover,
-    .footer-link:hover {
-        color: rgb(127, 127, 127);
+
+.skillfantasyarena-production-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.skillfantasyarena-section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.skillfantasyarena-flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.skillfantasyarena-left-block, .skillfantasyarena-right-block {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.skillfantasyarena-center-block {
+    flex: 1;
+    max-width: 350px; 
+    margin: 10px;
+    border: 2px dashed #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    font-size: 3em;
+}
+
+.skillfantasyarena-service {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.skillfantasyarena-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #44f325;
+}
+.skillfantasyarena-production-btn {
+    text-decoration: none;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 6px 8px;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+@media (max-width: 768px) {
+    .skillfantasyarena-flex-container {
+        flex-direction: column;
+        align-items: center;
     }
-    .nav-link:hover {
-        color: rgb(127, 127, 127);
+
+    .skillfantasyarena-left-block, .skillfantasyarena-right-block, .skillfantasyarena-center-block {
+        max-width: 100%;
     }
-    .play-button:hover {
-        background-color: #44f325;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.achievements {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievements__title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.achievements__description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.achievements__stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.achievement-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 30%; /* Adjust to fit responsiveness */
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+    position: relative;
+}
+
+.achievement-card__inner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Fixed height */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.achievement-card__front,
+.achievement-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.achievement-card__front {
+    background-color: #4CAF50; /* Primary color */
+    color: white;
+}
+
+.achievement-card__back {
+    background-color: #efefef; /* Secondary color */
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.achievement-card:hover .achievement-card__inner {
+    transform: rotateY(180deg);
+}
+
+.achievement-card__number {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.achievement-card__text {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .achievement-card {
+        width: 45%; /* Responsive size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-card {
+        width: 90%; /* Responsive size for mobile */
+    }
+}
+
+.team-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1400px;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.team-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+.team-card p { 
+    color: rgb(255, 255, 255);
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-card {
+    background-color: #ececec43;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.team-card h3 {
+    margin: 10px 0 5px;
+    color: rgb(88, 253, 23);
+}
+
+.team-card p {
+    margin: 5px 0;
+}
+
+@media (max-width: 900px) {
+    .team-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-card {
+        width: 100%;
+    }
+}
+
+.reviews-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.reviews-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.slide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.review-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .reviews-title {
+        font-size: 1.5em;
+    }
+
+    .review-text {
+        font-size: 1em;
+    }
+
+    .review-image {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -718,5 +1007,25 @@ justify-content: space-evenly;
     .download-main p,
     .download-main li {
         font-size: 1em;
+    }
+}
+
+
+
+@media (min-width: 1025px) {
+    .header-link:hover,
+    .footer-link:hover {
+        color: rgb(127, 127, 127);
+    }
+    .nav-link:hover {
+        color: rgb(127, 127, 127);
+    }
+    .play-button:hover {
+        background-color: #44f325;
+    }
+    .skillfantasyarena-production-btn:hover {
+        background-color: #44f325;
+        color: rgb(0, 0, 0);
+        border: black;
     }
 }

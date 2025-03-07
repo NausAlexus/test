@@ -1228,6 +1228,88 @@ justify-content: space-evenly;
     }
 }
 
+.privacy-policy {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 60px;
+}
+
+.policy-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #44f325;
+}
+
+.policy-introduction, .policy-information-collection, .policy-information-usage, .policy-data-security, .policy-information-sharing {
+    margin-bottom: 20px;
+}
+
+.privacy-policy h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.privacy-policy ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .privacy-policy {
+        padding: 14px;
+    }
+
+    .policy-title {
+        font-size: 1.5em;
+    }
+
+    .privacy-policy h3 {
+        font-size: 1.2em;
+    }
+}
+
+.terms-of-use {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 60px;
+}
+
+.terms-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #44f325;
+}
+
+.terms-introduction, .terms-use-of-services, .terms-account-creation, .terms-user-generated-content, 
+.terms-intellectual-property, .terms-third-party-links, .terms-disclaimers, 
+.terms-indemnification, .terms-termination, .terms-governing-law, .terms-changes, .terms-player-responsibilities {
+    margin-bottom: 20px;
+}
+
+.terms-of-use h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.terms-of-use ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .terms-of-use {
+        padding: 14px;
+    }
+
+    .terms-title {
+        font-size: 1.5em;
+    }
+
+    .terms-of-use h3 {
+        font-size: 1.2em;
+    }
+}
+
 
 
 

@@ -1037,7 +1037,7 @@ justify-content: space-evenly;
 }
 
 .arena-subtitle {
-    color: #0056b3;
+    color: rgb(68, 243, 37);
     margin-bottom: 10px;
 }
 
@@ -1054,15 +1054,23 @@ justify-content: space-evenly;
 }
 
 .arena-image {
-    width: 100%;
+    width: 60%;
     height: auto;
     border-radius: 5px;
     margin-top: 10px;
 }
 
+.imgCenter{
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .skill-fantasy-arena-main {
         padding: 15px;
+    }
+    .arena-image{
+        width: 90%;
     }
 
     .arena-title {

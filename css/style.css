@@ -1605,6 +1605,81 @@ justify-content: space-evenly;
 
 
 
+
+.certification {
+    padding: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+.certification-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.certification-description {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.certification-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.important-notice {
+    background-color: #ffecb3; /* Light background for the notice */
+    border: 1px solid #ffa000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+.notice-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a65e2e; /* Title color */
+}
+.notice-text {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333; /* Notice text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .certification-title {
+        font-size: 20px;
+    }
+    .certification-description {
+        font-size: 16px;
+    }
+    .notice-title {
+        font-size: 18px;
+    }
+    .notice-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certification {
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .certification-title,
+    .certification-description,
+    .notice-title,
+    .notice-text {
+        font-size: smaller;
+    }
+}
+
+
+
+
+
+
+
+
+
 @media (min-width: 1025px) {
     .header-link:hover,
     .footer-link:hover {

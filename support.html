@@ -14,6 +14,7 @@
 
         <script src="js/burgerMenu.js" defer></script>
         <script src="js/popUp.js" defer></script>
+        <script src="js/chatBot.js" defer></script>
 
     </head>
     <body>
@@ -53,6 +54,20 @@
         <main class="support-main">
             <h1 class="support-title">Support Center</h1>
             <p class="support-intro">Welcome to the SkillFantasyArena Support Center! Here you can find various resources, guides, and assistance options designed to enhance your gaming experience. Whether you're facing technical challenges or have questions about gameplay, you’ll find everything you need right here. Let us help you succeed in your fantasy sports journey!</p>
+            
+            <div class="chatbot-container" id="chatbotContainer">
+                <div class="chatbot-header">Chatbot</div>
+                <div class="chatbot-messages" id="chatbotMessages">
+                    <div class="chatbot-message chatbot-bot-message">Hello! How can I assist you today?</div>
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" placeholder="Type your message..." />
+                    <button>Send</button>
+                </div>
+            </div>
+            <button class="chatbot-toggle" id="chatbotToggle">
+                <i class="fas fa-comment"></i>
+            </button>
             
             <section class="support-section">
                 <h2 class="support-subtitle">1. Getting Started with SkillFantasyArena</h2>

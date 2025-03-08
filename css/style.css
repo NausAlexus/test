@@ -68,6 +68,7 @@ body::-webkit-scrollbar-track {
     z-index: 1000;
     max-width: 1920px;
     margin: 0 auto;
+    border-bottom: 1px solid black;
 }
 .navigation {
     display: flex;
@@ -1549,12 +1550,6 @@ justify-content: space-evenly;
     }
 }
 
-
-
-
-
-
-
 .popup {
     display: none; /* Скрыть по умолчанию */
     position: fixed; 
@@ -1598,13 +1593,6 @@ justify-content: space-evenly;
         height: 100vh;
     }
 }
-
-
-
-
-
-
-
 
 .certification {
     padding: 20px;
@@ -1672,13 +1660,148 @@ justify-content: space-evenly;
     }
 }
 
+.auth-section {
+    padding: 20px;
+    background-color: #44f325;
+    text-align: center;
+    margin: 40px 0;
+}
 
+.auth-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.auth-container label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
 
+.auth-container input[type="tel"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
+.auth-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: -320px; /* Изначально будет скрыт, отзывчиво при изменении */
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease; /* Плавная анимация */
+    z-index: 1000;
+}
 
+.chatbot-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+}
+
+.chatbot-messages {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    flex: 1;
+}
+
+.chatbot-message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.chatbot-user-message {
+    background-color: #007BFF;
+    color: white;
+    align-self: flex-end;
+}
+
+.chatbot-bot-message {
+    background-color: #e1e1e1;
+    color: black;
+    align-self: flex-start;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 8px;
+    outline: none;
+}
+
+.chatbot-input button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.chatbot-input button:hover {
+    background-color: #0056b3; /* Темнее шейд на наведение */
+}
+
+/* Кнопка переключения */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.chatbot-toggle:hover {
+    background-color: #0056b3; /* Темнее шейд на наведение */
+}
 
 @media (min-width: 1025px) {
     .header-link:hover,
@@ -1695,5 +1818,8 @@ justify-content: space-evenly;
         background-color: #44f325;
         color: rgb(0, 0, 0);
         border: black;
+    }
+    .auth-button:hover {
+        background-color: #0056b3;
     }
 }

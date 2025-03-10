@@ -1967,8 +1967,9 @@ justify-content: space-evenly;
     }
 
     .header-link{
-        color: transparent;
+        display: none;
     }
+    
     .burger-line{
         background-color: white;
     }
@@ -1980,6 +1981,9 @@ justify-content: space-evenly;
     }
     .burger-menu{
         z-index: 10000;
+        position: fixed;
+        right: 10px;
+        top: 15px;
     }
     .nav-list{
         top: 0;

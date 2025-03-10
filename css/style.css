@@ -1510,6 +1510,9 @@ justify-content: space-evenly;
 .img-right-unique {
     order: 1;
 }
+.checkbox{
+    margin-bottom: 15px;
+}
 
 /* Медиа-запросы для адаптивности */
 @media (max-width: 768px) {
@@ -1671,6 +1674,7 @@ justify-content: space-evenly;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: black;
 }
 
 .auth-container {
@@ -1682,6 +1686,8 @@ justify-content: space-evenly;
 .auth-container label {
     margin-bottom: 10px;
     font-size: 16px;
+    color: black;
+
 }
 
 .auth-container input[type="tel"] {

@@ -877,7 +877,7 @@ footer p {
     .nav-list {
         display: flex;
         flex-direction: column;
-        background-color: #44f325;
+        background-color: #32b11b;
         position: absolute;
         top: 60px;
         right: 0;
@@ -965,7 +965,7 @@ footer p {
 
 .block-title {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -1683,11 +1683,12 @@ justify-content: space-evenly;
 }
 
 .auth-container label {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     font-size: 16px;
     color: black;
 
 }
+
 
 .auth-container input[type="tel"] {
     padding: 10px;
@@ -1711,7 +1712,7 @@ justify-content: space-evenly;
 
 .chatbot-container {
     position: fixed;
-    bottom: 20px;
+    bottom: 70px;
     right: -320px; /* Изначально будет скрыт, отзывчиво при изменении */
     width: 300px;
     border: 1px solid #ccc;
@@ -1922,7 +1923,6 @@ justify-content: space-evenly;
   
   .checkbox {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 20px !important;
   }
@@ -1988,4 +1988,7 @@ justify-content: space-evenly;
     .nav-list{
         top: 0;
     }
+}
+.formColor_a{
+    color: rgb(17, 237, 17) !important;
 }

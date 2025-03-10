@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {\
     $headers = "From: $to \r\n";
     mail($to, $subject, $body, $headers);
     // Redirect to thank you page
-    header("Location: /thanks/");
+    header("Location: thanks/");
     exit();
 }
 ?>

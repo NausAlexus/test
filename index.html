@@ -108,7 +108,7 @@
         <section class="auth-section">
             <h2 class="auth-title">Register / Log In</h2>
             <div class="auth-container">
-                <form action="thanks_form.php" method="post" id="authForm">
+                <form  id="authForm">
                     <div>
                         <label for="phoneNumber">Phone Number:</label>
                         <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
@@ -121,10 +121,10 @@
                             <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
                         </label>
                     </div>
-                    <button type="submit" class="auth-button" id="registerButton">
+                    <button type="submit" class="auth-button" id="registerButton" name="action" value="register">
                         Register
                     </button>
-                    <button type="submit" class="auth-button" id="loginButton">
+                    <button type="submit" class="auth-button" id="loginButton" name="action" value="login">
                         Log In
                     </button>
                 </form>
@@ -636,7 +636,7 @@
                 <div class="footer__links">
                     <a href="https://www.gamcare.org" target="_blank"><img src="img//ga-care2.png" alt="begamble"
                             class="footer__begamble" /></a>
-                    <img src="img/18.png" alt="18+" class="footer__age" />
+                    <img src="img/18.jpg" alt="18+" class="footer__age" />
                 </div>
             </div>
         </div>

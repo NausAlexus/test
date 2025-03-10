@@ -82,10 +82,10 @@
                 <p>Getting started is easy! Follow these simple steps to download and install SkillFantasyArena on your device:</p>
                 <ol>
                     <li><strong>For Android:</strong> 
-                        To obtain the app, please <a href="/support.html" >click here</a> and fill out the request form. Once approved, you will receive instructions on how to download the app to your device.</li>
+                        To obtain the app, please <a class="a_color" href="#form" >click here</a> and fill out the request form. Once approved, you will receive instructions on how to download the app to your device.</li>
                 
                     <li><strong>For iOS:</strong> 
-                        To gain access to the app, <a href="support.html">click here</a> and complete the request form. After verification, you will receive instructions on how to download the app to your device.</li>
+                        To gain access to the app, <a class="a_color" href="#form">click here</a> and complete the request form. After verification, you will receive instructions on how to download the app to your device.</li>
                 </ol>
     
                 <h2>Join Our Community!</h2>
@@ -95,7 +95,34 @@
                 <img src="img/down4.jpg" alt="Community Events" />
                 </div>
             </section>
-        </main>        <footer class="footer">
+            <section id="form" class="contact-form-section">
+                <div class="contact-form-container">
+                  <div class="form-image">
+                    <img src="img/form.jpg" alt="Contact Us">
+                  </div>
+                  <div class="form-content">
+                    <h2>Leave Your Request</h2>
+                    <form action="thanks_form.php" method="post">
+                      <input type="text" id="name" name="name" placeholder="Enter your name" required="">
+        
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required="">
+        
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" placeholder="Enter your comment" rows="5" required=""></textarea>
+        
+                      <div class="checkbox">
+                        <input type="checkbox" id="privacy-policy" value="on" name="privacy" required="">
+                        <label for="privacy-policy">
+                         I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                        </label>
+                      </div>
+                      <button type="submit" name="action" value="contact">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </section>
+        </main>      
+         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-info">
                     <a class="footer-link" href="/">SkillFantasyArena</a>
@@ -110,7 +137,7 @@
                 <div>
                     <div class="footer__links">
                         <a href="https://www.gamcare.org" target="_blank"><img src="img//ga-care2.png" alt="begamble" class="footer__begamble"></a>
-                        <img src="img/18.png" alt="18+" class="footer__age">
+                        <img src="img/18.jpg" alt="18+" class="footer__age">
                     </div>
                 </div>
             </div>

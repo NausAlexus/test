@@ -8,7 +8,7 @@ function closePopup() {
     popup.style.display = 'none'; // Скрыть поп-ап
 }
 
-window.onload = function() {
+window.onload = function () {
     // Проверка, был ли уже показан поп-ап
     if (!sessionStorage.getItem('popupShown')) {
         setTimeout(() => {
@@ -16,7 +16,11 @@ window.onload = function() {
             sessionStorage.setItem('popupShown', 'true'); // Установить флажок, что поп-ап показан
         }, 3000);
     }
-};
 
-// Пример: добавление события для кнопки закрытия поп-апа
-document.getElementById('closePopupButton').addEventListener('click', closePopup);
+    // Делегирование события для кнопки закрытия
+    document.body.addEventListener('click', function (event) {
+        if (event.target && event.target.id === 'closePopupButton') {
+            closePopup(); // Закрыть поп-ап, если кликнут по кнопке
+        }
+    });
+};

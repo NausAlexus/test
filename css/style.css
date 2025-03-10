@@ -1934,7 +1934,7 @@ justify-content: space-evenly;
   }
   
   .checkbox label a {
-    color: green;
+    color: blue;
     text-decoration: none;
     text-wrap: nowrap;
   
@@ -1957,4 +1957,31 @@ justify-content: space-evenly;
 }  
 .footer-info i {
     margin-right: 8px;
+}
+
+
+@media (max-width:426px) {
+    .header{
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    .header-link{
+        color: transparent;
+    }
+    .burger-line{
+        background-color: white;
+    }
+    .main-content{
+        margin-top: 0;
+    }
+    .slider-header{
+        margin-top: 0;
+    }
+    .burger-menu{
+        z-index: 10000;
+    }
+    .nav-list{
+        top: 0;
+    }
 }

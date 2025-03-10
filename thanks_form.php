@@ -3,7 +3,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {\
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-    $phoneNumber = $_POST["phoneNumber"];
 	$to = "support@" . $_SERVER['HTTP_HOST'];
     $subject = "New Contact Form Submission";
     $body = "Name: $name\n";

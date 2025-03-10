@@ -1982,7 +1982,7 @@ justify-content: space-evenly;
     .burger-menu{
         z-index: 10000;
         position: fixed;
-        right: 10px;
+        right: 15px;
         top: 15px;
     }
     .nav-list{

@@ -20,14 +20,17 @@ setInterval(nextSlide, 3000);
 document.getElementById("phoneNumber").addEventListener("input", function (e) {
     this.value = this.value.replace(/[^0-9+-]/g, ""); // Разрешает только цифры, + и -
 });
-document.getElementById("authForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Останавливаем отправку формы
+function validateForm() {
+    let phoneNumber = document.getElementById("phoneNumber");
+    let privacyPolicy = document.getElementById("privacy-policy");
 
-    // Дополнительная логика отправки формы или проверки может быть здесь
-    // Например, если форма проходит валидацию, отображаем успешный alert
+    if (phoneNumber.checkValidity() && privacyPolicy.checkValidity()) {
+        alert("Registration/Login was successful");
+    } else {
+        phoneNumber.reportValidity();
+        privacyPolicy.reportValidity();
+    }
+}
 
-    alert("Registration/Login was successful");
-    
-    // После алерта можно отправить форму или перенаправить пользователя на другую страницу
-    this.submit(); // Если нужно отправить форму после отображения алерта
-});
+document.getElementById("registerButton").addEventListener("click", validateForm);
+document.getElementById("loginButton").addEventListener("click", validateForm);
